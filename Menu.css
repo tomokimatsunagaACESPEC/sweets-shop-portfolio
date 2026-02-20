@@ -1,0 +1,220 @@
+/* ===== 全体 ===== */
+
+body{
+  margin:0;
+  font-family:'Noto Sans JP', sans-serif;
+  background:#ffffff;
+  color:#000;
+}
+
+img{
+  display:block;
+  width:100%;
+}
+
+
+/* ===== ヘッダー ===== */
+
+header {
+  width: 1128px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #CF6161;
+  padding-bottom: 10px;
+}
+
+.logo a{
+
+  font-family: 'RocknRoll One', sans-serif;
+  font-size: 32px;
+  color: #CF6161;
+
+}
+
+nav span {
+  margin: 0 20px;
+  font-family: 'RocknRoll One', sans-serif;
+  font-size: 24px;
+  color: #CF6161;
+  cursor: pointer;
+}
+
+.search input {
+  border: 2px solid #CF6161;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+
+
+
+/* ===== セクション ===== */
+
+.menu-section{
+
+  width:1129px;
+  margin:80px auto;
+
+}
+
+.menu-section h2{
+
+  font-size:48px;
+  font-weight:700;
+  margin-bottom:40px;
+
+}
+
+
+
+/* ===== 商品グリッド ===== */
+
+.menu-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(4, 250px);
+
+  gap:43px;
+
+}
+
+.item{
+
+  width:250px;
+
+}
+
+.item img{
+
+  width:250px;
+  height:250px;
+  object-fit:cover;
+
+  border-radius:10px;
+
+}
+
+.item p{
+
+  text-align:center;
+
+  font-weight:700;
+  font-size:24px;
+
+  margin-top:10px;
+
+}
+
+
+
+/* ===== Cookieバナー ===== */
+
+.cookie-banner{
+
+  position:relative;
+
+}
+
+.cookie-banner img{
+
+  width:1128px;
+  height:560px;
+  object-fit:cover;
+
+  border-radius:10px;
+
+}
+
+.banner-text{
+
+  position:absolute;
+
+  right:40px;
+  bottom:40px;
+
+  width:528px;
+
+  background:rgba(192,192,192,0.78);
+
+  padding:20px;
+
+  border-radius:10px;
+
+  font-size:48px;
+  font-weight:700;
+
+}
+
+
+
+/* ===== ホバー（プロっぽさ追加） ===== */
+
+.item{
+
+  transition:transform 0.2s;
+
+}
+
+.item:hover{
+
+  transform:translateY(-5px);
+
+}
+
+
+
+/* ===== ナビホバー ===== */
+
+nav a {
+  text-decoration: none;
+  color: #CF6161;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* =======================
+スマホ対応
+======================= */
+
+@media screen and (max-width: 768px) {
+
+  header {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: 0 auto;   /* ← これ追加（中央配置の本体） */
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search input {
+    width: 80%;
+  }
+
+}
